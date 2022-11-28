@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Qlocktwo Project</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Qlocktwo Project V1</h1>
+        <h3>Created by: Caleb Achey</h3>
+        <div id="time" onload="checkTime()"></div>
+        <div class="main">
+            <div class="row r1">
+                <div id="i1" class="extra default item"></div>
+                <div id="t1" class="extra default item"></div>
+                <div class="item"></div>
+                <div id="i2" class="extra default item"></div>
+                <div id="s1" class="extra default item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="row r2">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div id="q1" class="item"></div>
+                <div id="u1" class="item"></div>
+                <div id="a4" class="item"></div>
+                <div id="r1" class="item"></div>
+                <div id="t2" class="item"></div>
+                <div id="e1" class="item"></div>
+                <div id="r2" class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="row r3">
+                <div id="t3" class="item"></div>
+                <div id="w1" class="item"></div>
+                <div id="e2" class="item"></div>
+                <div id="n1" class="item"></div>
+                <div id="t4" class="item"></div>
+                <div id="y1" class="item"></div>
+                <div id="f1" class="item"></div>
+                <div id="i3" class="item"></div>
+                <div id="v1" class="item"></div>
+                <div id="e3" class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="row r4">
+                <div id="h1" class="item"></div>
+                <div id="a5" class="item"></div>
+                <div id="l2" class="item"></div>
+                <div id="f2" class="item"></div>
+                <div class="item"></div>
+                <div id="t5" class="item"></div>
+                <div id="e4" class="item"></div>
+                <div id="n2" class="item"></div>
+                <div class="item"></div>
+                <div id="t6" class="item"></div>
+                <div id="o1" class="item"></div>
+            </div>
+            <div class="row r5">
+                <div id="p2" class="item"></div>
+                <div id="a6" class="item"></div>
+                <div id="s4" class="item"></div>
+                <div id="t7" class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div id="n3" class="item"></div>
+                <div id="i4" class="item"></div>
+                <div id="n4" class="item"></div>
+                <div id="e6" class="item"></div>
+            </div>
+            <div class="row r6">
+                <div id="o2" class="item"></div>
+                <div id="n5" class="item"></div>
+                <div id="e7" class="item"></div>
+                <div id="s5" class="item"></div>
+                <div id="i5" class="item"></div>
+                <div id="x2" class="item"></div>
+                <div id="t8" class="item"></div>
+                <div id="h2" class="item"></div>
+                <div id="r4" class="item"></div>
+                <div id="e8" class="item"></div>
+                <div id="e9" class="item"></div>
+            </div>
+            <div class="row r7">
+                <div id="f4" class="item"></div>
+                <div id="o3" class="item"></div>
+                <div id="u3" class="item"></div>
+                <div id="r5" class="item"></div>
+                <div id="f5" class="item"></div>
+                <div id="i6" class="item"></div>
+                <div id="v2" class="item"></div>
+                <div id="e10" class="item"></div>
+                <div id="t9" class="item"></div>
+                <div id="w2" class="item"></div>
+                <div id="o4" class="item"></div>
+            </div>
+            <div class="row r8">
+                <div id="e11" class="item"></div>
+                <div id="i7" class="item"></div>
+                <div id="g1" class="item"></div>
+                <div id="h3" class="item"></div>
+                <div id="t10" class="item"></div>
+                <div id="e12" class="item"></div>
+                <div id="le" class="item"></div>
+                <div id="e13" class="item"></div>
+                <div id="v3" class="item"></div>
+                <div id="e14" class="item"></div>
+                <div id="n6" class="item"></div>
+            </div>
+            <div class="row r9">
+                <div id="s6" class="item"></div>
+                <div id="e15" class="item"></div>
+                <div id="v4" class="item"></div>
+                <div id="e16" class="item"></div>
+                <div id="n7" class="item"></div>
+                <div id="t11" class="item"></div>
+                <div id="w3" class="item"></div>
+                <div id="e17" class="item"></div>
+                <div id="l4" class="item"></div>
+                <div id="v5" class="item"></div>
+                <div id="e18" class="item"></div>
+            </div>
+            <div class="row r10">
+                <div id="t12" class="item"></div>
+                <div id="e19" class="item"></div>
+                <div id="n8" class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="extra item"></div>
+                <div class="extra item"></div>
+                <div class="extra item"></div>
+                <div class="extra item"></div>
+                <div class="extra item"></div>
+                <div class="extra item"></div>
+            </div>
+        </div>
+
+        <script>
+            const letters = [
+                "I", "T", "L", "I", "S", "A", "S", "A", "M", "P", "M",
+                "A", "C", "Q", "U", "A", "R", "T", "E", "R", "D", "C",
+                "T", "W", "E", "N", "T", "Y", "F", "I", "V", "E", "X",
+                "H", "A", "L", "F", "S", "T", "E", "N", "F", "T", "O",
+                "P", "A", "S", "T", "E", "R", "U", "N", "I", "N", "E",
+                "O", "N", "E", "S", "I", "X", "T", "H", "R", "E", "E",
+                "F", "O", "U", "R", "F", "I", "V", "E", "T", "W", "O",
+                "E", "I", "G", "T", "H", "E", "L", "E", "V", "E", "N",
+                "S", "E", "V", "E", "N", "T", "W", "E", "L", "V", "E",
+                "T", "E", "N", "S", "E", "O", "C", "L", "O", "C", "K",
+            ];
+            var num = 0;
+            let hour = 0;
+            let minute = 0;
+    
+            //This function generates all the required letters in the correct order
+            window.onload = function() {
+                num = 0;
+                for (let node of document.querySelectorAll("div.item")) {
+                    if (node.textContent != "") continue;
+                    let charCode = letters[num];
+                    num++;
+                    node.textContent =  String(charCode);
+                }
+
+                //This starts all letters as white until the first check
+                const active = document.querySelectorAll("div.item");
+                
+                active.forEach((element) => {
+                    element.style.color = "white";
+                });
+            }
+    
+            //This function gets the current time to the minute
+            function checkTime() {
+                let date = new Date(); 
+                let hh = date.getHours();
+                let mm = date.getMinutes();
+
+                if(hh == 0){
+                    hh = 12;
+                }
+    
+                if(hh > 12){
+                    hh = hh - 12;
+                }
+    
+                hh = (hh < 10) ? "0" + hh : hh;
+                mm = (mm < 10) ? "0" + mm : mm;
+                    
+                let time = hh + ":" + mm;
+
+                const active = document.querySelectorAll("div.item");
+                
+                active.forEach((element) => {
+                    element.style.color = "black";
+                });
+
+                hour = hh;
+                minute = mm;
+
+                //console.log(hour + ":" + minute);
+    
+                document.getElementById("time").innerText = time; 
+                let t = setTimeout(function(){ checkTime() }, 1000);
+            } checkTime();
+
+            //This function tests all the possible times in a shorter period
+            //To use this function comment out lines 204 and 205 and remove the comment from line 223
+            function test() {
+                if (minute >= 60) {
+                    minute = 0;
+                    hour = hour + 1;
+                } else {
+                    minute = minute + 5;
+                }
+                console.log(hour + ":" + minute);
+            } //setInterval(test, 1000);
+
+
+
+            //This function determines when to show the It Is and oClock lights
+            function checkExtra() {
+                //On the hour
+                if (minute == 60) {
+                    const temp = document.querySelectorAll("div.extra");
+                
+                    temp.forEach((element) => {
+                    element.style.color = "white";
+                });
+                //Half past
+                } else if (minute <= 4) {
+                    const temp = document.querySelectorAll("div.extra");
+                
+                    temp.forEach((element) => {
+                    element.style.color = "white";
+                });
+                    
+                }else if (minute >= 30 && minute <=34) {
+                    const temp = document.querySelectorAll("div.default");
+                
+                    temp.forEach((element) => {
+                    element.style.color = "white";
+                });
+                }
+            } setInterval(checkExtra, 1000);
+
+            //This function lights up the letters in accordance to the hour it currently is
+            function checkHour() {
+                //Display previous hour indicating it is a quarter past one
+                if (hour == 1 && minute <= 34) {  
+                    const active = document.querySelectorAll("#o2, #n5, #e7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                //Display current hour indicating it is a quarter to two
+                } else if (hour == 1 && minute >= 35) {               
+                    const active = document.querySelectorAll("#t9, #w2, #o4");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 2 && minute <= 34) {
+                    const active = document.querySelectorAll("#t9, #w2, #o4");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 2 && minute >= 35) {
+                    const active = document.querySelectorAll("#t8, #h2, #r4, #e8, #e9");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 3 && minute <= 34) {
+                    const active = document.querySelectorAll("#t8, #h2, #r4, #e8, #e9");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 3 && minute >= 35) {
+                    const active = document.querySelectorAll("#f4, #o3, #u3, #r5");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 4 && minute <= 34) {
+                    const active = document.querySelectorAll("#f4, #o3, #u3, #r5");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 4 && minute >= 35) {
+                    const active = document.querySelectorAll("#f5, #i6, #v2, #e10");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 5 && minute <= 34) {
+                    const active = document.querySelectorAll("#f5, #i6, #v2, #e10");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 5 && minute >= 35) {
+                    const active = document.querySelectorAll("#s5, #i5, #x2");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 6 && minute <= 34) {
+                    const active = document.querySelectorAll("#s5, #i5, #x2");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 6 && minute >= 35) {
+                    const active = document.querySelectorAll("#s6, #e15, #v4, #e16, #n7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 7 && minute <= 34) {
+                    const active = document.querySelectorAll("#s6, #e15, #v4, #e16, #n7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 7 && minute >= 35) {
+                    const active = document.querySelectorAll("#e11, #i7, #g1, #h3, #t10");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 8 && minute <= 34) {
+                    const active = document.querySelectorAll("#e11, #i7, #g1, #h3, #t10");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 8 && minute >= 35) {
+                    const active = document.querySelectorAll("#n3, #i4, #n4, #e6");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 9 && minute <= 34) {
+                    const active = document.querySelectorAll("#n3, #i4, #n4, #e6");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 9 && minute >= 35) {
+                    const active = document.querySelectorAll("#t12, #e19, #n8");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 10 && minute <= 34) {
+                    const active = document.querySelectorAll("#t12, #e19, #n8");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 10 && minute >= 35) {
+                    const active = document.querySelectorAll("#e12, #le, #e13, #v3, #e14, #n6");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 11 && minute <= 34) {
+                    const active = document.querySelectorAll("#e12, #le, #e13, #v3, #e14, #n6");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 11 && minute >= 35) {
+                    const active = document.querySelectorAll("#t11, #w3, #e17, #l4, #v5, #e18");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                if (hour == 12 && minute <= 34) {
+                    const active = document.querySelectorAll("#t11, #w3, #e17, #l4, #v5, #e18");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                } else if (hour == 12 && minute >= 35) {
+                    const active = document.querySelectorAll("#o2, #n5, #e7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+            } checkHour();
+            setInterval(checkHour, 1000);
+
+            //This function handles minutes with specific times such as quarter till, half past, ect
+            function checkMinute() {
+                //Five past
+                if (minute >= 5 && minute <= 9) {
+                    const active = document.querySelectorAll("#f1, #i3, #v1, #e3, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                //Ten past
+                if (minute >= 10 && minute <= 14) {
+                    const active = document.querySelectorAll("#t5, #e4, #n2, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                //Quarter past
+                if (minute >= 15 && minute <= 19) {
+                    const active = document.querySelectorAll("#q1, #u1, #a4, #r1, #t2, #e1, #r2, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                //Twenty past
+                if (minute >= 20 && minute <= 24) {
+                    const active = document.querySelectorAll("#t3, #w1, #e2, #n1, #t4, #y1, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                 //Twenty five past
+                if (minute >= 25 && minute <= 29) {
+                    const active = document.querySelectorAll("#t3, #w1, #e2, #n1, #t4, #y1, #f1, #i3, #v1, #e3, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                //Half past
+                if (minute >= 30 && minute <=34) {
+                    const active = document.querySelectorAll("#h1, #a5, #l2, #f2, #p2, #a6, #s4, #t7");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                //Twenty five to
+                if (minute >= 35 && minute <= 39) {
+                    const active = document.querySelectorAll("#t3, #w1, #e2, #n1, #t4, #y1, #f1, #i3, #v1, #e3, #t6, #o1");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                //Twenty to
+                if (minute >= 40 && minute <= 44) {
+                    const active = document.querySelectorAll("#t3, #w1, #e2, #n1, #t4, #y1, #t6, #o1");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                }
+
+                //Quarter to
+                if (minute >= 45 && minute <= 49) {
+                    const active = document.querySelectorAll("#q1, #u1, #a4, #r1, #t2, #e1, #r2, #t6, #o1");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                //Ten to
+                if (minute >= 50 && minute <=54) {
+                    const active = document.querySelectorAll("#t5, #e4, #n2, #t6, #o1");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 }
+
+                //Five to
+                if (minute >= 55 && minute <=59) {
+                    const active = document.querySelectorAll("#f1, #i3, #v1, #e3, #t6, #o1");
+
+                    active.forEach((element) => {
+                        element.style.color = "white";
+                    });
+                 } 
+            } checkMinute();
+            setInterval(checkMinute, 1000);
+
+        </script>
+    </body>
+</html>
